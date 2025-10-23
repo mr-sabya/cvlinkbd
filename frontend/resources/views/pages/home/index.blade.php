@@ -44,11 +44,11 @@
     <div class="container">
         <p class="text-muted mb-4">Companies we helped grow</p>
         <div class="d-flex flex-wrap justify-content-between align-items-center">
-            <img src="assets/images/partners/vodafone-2017-logo.png" alt="Vodafone" class="company-logo">
-            <img src="assets/images/partners/intel-3.png" alt="Intel" class="company-logo">
-            <img src="assets/images/partners/tesla-9-1.png" alt="Tesla" class="company-logo">
-            <img src="assets/images/partners/amd-logo-1.png" alt="AMD" class="company-logo">
-            <img src="assets/images/partners/talkit-1.png" alt="Talkit" class="company-logo">
+            <img src="assets/images/partners/vodafone-2017-logo.png" alt="Vodafone" class="partner-logo">
+            <img src="assets/images/partners/intel-3.png" alt="Intel" class="partner-logo">
+            <img src="assets/images/partners/tesla-9-1.png" alt="Tesla" class="partner-logo">
+            <img src="assets/images/partners/amd-logo-1.png" alt="AMD" class="partner-logo">
+            <img src="assets/images/partners/talkit-1.png" alt="Talkit" class="partner-logo">
         </div>
     </div>
 </section>
