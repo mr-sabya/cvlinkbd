@@ -6,3 +6,12 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 // job
 Route::get('/jobs', [App\Http\Controllers\JobController::class, 'index'])->name('job.index');
+
+
+// companies
+Route::get('/companies', [App\Http\Controllers\CompanyController::class, 'index'])->name('company.index');
+
+
+Route::get('/login', [App\Http\Controllers\AuthController::class, 'showLoginForm'])->name('login');
+
+Route::get('/register', [App\Http\Controllers\AuthController::class, 'showRegisterForm'])->name('register');

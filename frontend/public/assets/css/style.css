@@ -97,6 +97,10 @@ section {
     top: 0;
 }
 
+.bottom-30 {
+    bottom: -27px !important;
+}
+
 
 /* navbar start */
 .main-navbar .login {
@@ -395,7 +399,7 @@ section {
     border-color: #5e50f5;
 }
 
-.job-section .title{
+.job-section .title {
     font-size: 32px;
     font-weight: 600;
 }
@@ -446,7 +450,7 @@ section {
     width: 100%;
 }
 
-.job-section .apply-btn:hover{
+.job-section .apply-btn:hover {
     background-color: var(--primary-dark-color);
 }
 
@@ -461,25 +465,153 @@ section {
 /* pagination */
 
 .pagination .page-item.active .page-link {
-    background-color: #5e50f5;
-    border-color: #5e50f5;
-    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
     border-radius: 50%;
 }
 
 .pagination .page-link {
-    color: #6c757d;
+    color: var(--text-color);
     border: none;
     margin: 0 5px;
     border-radius: 50%;
 }
 
 .view-options .btn-primary {
-    background-color: #5e50f5;
-    border-color: #5e50f5;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 /* job section end */
+
+
+/* company page start */
+.comapny-section .company-card {
+    border: 1px solid var(--footer-text);
+    transition: all 0.2s ease-in-out;
+    border-radius: 0;
+}
+
+.comapny-section .company-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-color: var(--footer-text);
+}
+
+.comapny-section .company-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.comapny-section .job-count {
+    top: 10px;
+    right: 10px;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-weight: 500;
+}
+
+.comapny-section .category-badge {
+    font-size: 0.75rem;
+    background-color: #fff7e6;
+    color: #f0a500;
+    border: 1px solid #f0a500;
+    margin-right: 4px;
+    border-radius: 20px;
+}
+
+.comapny-section .category-badge:nth-child(2) {
+    background-color: #fff0f6;
+    color: #e83e8c;
+    border-color: #e83e8c;
+}
+
+.comapny-section .category-badge:nth-child(3) {
+    background-color: #f3f0ff;
+    color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+/* category section start */
+/* Category boxes */
+.comapny-category .category-box {
+    border: 1px solid #eee;
+    padding: 20px 40px;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+.comapny-category .category-box .icon i {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.comapny-category .category-box a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #25324B;
+}
+
+.comapny-category .category-box:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.comapny-category .category-box:hover i,
+.comapny-category .category-box:hover a{
+    color: var(--white-color);
+}
+
+.comapny-category .category-box.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+/* Company cards */
+.comapny-category .company-card {
+    border: 1px solid #eee;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0;
+    background-color: var(--white-color);
+    padding: 20px 0;
+}
+
+.comapny-category .company-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-color: var(--footer-text);
+}
+
+.comapny-category .company-card h6 {
+    font-size: 24px;
+}
+
+.comapny-category .company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.comapny-category .job-badge {
+    background-color: #f5f3ff;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+/* category section end */
+
+/* company page end */
 
 
 .footer-section {
