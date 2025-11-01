@@ -1,166 +1,27 @@
 @extends('layouts.auth')
 
 @section('content')
-<style>
-    body {
-        background: #f9f9fc;
-        font-family: 'Inter', sans-serif;
-    }
 
-    .signup-wrapper {
-        display: flex;
-        min-height: 100vh;
-    }
-
-    .signup-left {
-        flex: 1;
-        background: #f5f6ff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 40px;
-        position: relative;
-        text-align: center;
-    }
-
-    .signup-left img {
-        max-width: 300px;
-        border-radius: 8px;
-    }
-
-    .testimonial-box {
-        background: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        border-radius: 8px;
-        padding: 20px;
-        margin-top: 30px;
-        max-width: 320px;
-    }
-
-    .testimonial-box p {
-        font-size: 15px;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .testimonial-user {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .testimonial-user img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-
-    .signup-right {
-        flex: 1;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .signup-form {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .signup-form h3 {
-        font-weight: 700;
-        margin-bottom: 25px;
-    }
-
-    .google-btn {
-        border: 1px solid #dcdcdc;
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 10px;
-        font-weight: 500;
-        color: #333;
-        text-decoration: none;
-    }
-
-    .google-btn img {
-        width: 20px;
-    }
-
-    .divider {
-        text-align: center;
-        margin: 20px 0;
-        position: relative;
-    }
-
-    .divider::before,
-    .divider::after {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 40%;
-        background: #ddd;
-        top: 50%;
-    }
-
-    .divider::before {
-        left: 0;
-    }
-
-    .divider::after {
-        right: 0;
-    }
-
-    .form-control {
-        border-radius: 8px;
-        padding: 12px;
-    }
-
-    .btn-primary {
-        background-color: #4f46e5;
-        border: none;
-        border-radius: 8px;
-        padding: 12px;
-        font-weight: 600;
-    }
-
-    .btn-primary:hover {
-        background-color: #4338ca;
-    }
-
-    .login-text {
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    .login-text a {
-        color: #4f46e5;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .login-text a:hover {
-        text-decoration: underline;
-    }
-</style>
-
-<div class="signup-wrapper">
-    <div class="signup-left">
-        <img src="https://via.placeholder.com/300x350.png?text=Professional+Photo" alt="User">
-        <div class="testimonial-box">
-            <p>“Great platform for job seekers searching for new career heights.”</p>
-            <div class="testimonial-user">
-                <img src="https://via.placeholder.com/40x40.png" alt="User">
-                <div>
-                    <strong>Adam Sandler</strong><br>
-                    <small>Lead Engineer at Canva</small>
-                </div>
+<header class="login-header">
+    <div class="container">
+        <div class="py-3">
+            <div class="logo">
+                <a href="{{ route('home')}}" wire:navigate>
+                    <img src="assets/images/logo.png" alt="JobHunty Logo">
+                </a>
             </div>
         </div>
+    </div>
+</header>
+<div class="signup-wrapper">
+    <div class="signup-left">
+
+        <div class="image-box">
+            <img src="assets/images/auth/hired.png" alt="User" class="hired absulate">
+            <img src="assets/images/auth/person.png" alt="User" class="absulate man">
+            <img src="assets/images/auth/testimonial.png" alt="User" class="testimonial absulate">
+        </div>
+
     </div>
 
     <div class="signup-right">
