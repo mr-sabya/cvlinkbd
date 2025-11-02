@@ -1,3 +1,7 @@
+/* ============================================= */
+/* ====== PART 1: YOUR GLOBAL STYLES =========== */
+/* ============================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
@@ -12,12 +16,15 @@
     --black-color: #000000;
     --heading-color: #1e1e2f;
     --box-shadow: rgba(0, 0, 0, 0.06);
-    --footer-text: #D6DDEB;
+    --border-color: #D6DDEB;
+    --light-primary-color: rgba(70, 64, 222, 0.1);
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    color: var(--heading-color);
+    margin: 0;
 }
 
 section {
@@ -34,9 +41,8 @@ section {
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-
+    background-color: var(--primary-dark-color);
+    border-color: var(--primary-dark-color);
 }
 
 .section-title {
@@ -100,7 +106,6 @@ section {
 .bottom-30 {
     bottom: -27px !important;
 }
-
 
 /* navbar start */
 .main-navbar .login {
@@ -201,7 +206,6 @@ section {
 
 /* partner logo section end */
 
-
 /* category section */
 .category-card {
     border: 1px solid #e0e0e0;
@@ -218,7 +222,6 @@ section {
 .category-card:hover {
     background-color: var(--primary-color);
     color: var(--white-color) !important;
-    /* transform: translateY(-5px); */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -294,9 +297,7 @@ section {
     border: none !important;
 }
 
-
 /* latest job section end */
-
 
 /* banner section start */
 .banner {
@@ -324,8 +325,6 @@ section {
     font-weight: 600;
     margin-bottom: 20px;
 }
-
-
 
 .banner .search-box {
     background: var(--white-color);
@@ -371,7 +370,6 @@ section {
 /* job section start */
 .job-section .sidebar {
     background-color: #fff;
-
 }
 
 .job-section .filter-section {
@@ -485,17 +483,16 @@ section {
 
 /* job section end */
 
-
 /* company page start */
 .comapny-section .company-card {
-    border: 1px solid var(--footer-text);
+    border: 1px solid var(--border-color);
     transition: all 0.2s ease-in-out;
     border-radius: 0;
 }
 
 .comapny-section .company-card:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-color: var(--footer-text);
+    border-color: var(--border-color);
 }
 
 .comapny-section .company-logo {
@@ -537,7 +534,6 @@ section {
 }
 
 /* category section start */
-/* Category boxes */
 .comapny-category .category-box {
     border: 1px solid #eee;
     padding: 20px 40px;
@@ -566,7 +562,7 @@ section {
 }
 
 .comapny-category .category-box:hover i,
-.comapny-category .category-box:hover a{
+.comapny-category .category-box:hover a {
     color: var(--white-color);
 }
 
@@ -576,7 +572,6 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Company cards */
 .comapny-category .company-card {
     border: 1px solid #eee;
     transition: all 0.2s ease-in-out;
@@ -587,7 +582,7 @@ section {
 
 .comapny-category .company-card:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-color: var(--footer-text);
+    border-color: var(--border-color);
 }
 
 .comapny-category .company-card h6 {
@@ -610,10 +605,9 @@ section {
 }
 
 /* category section end */
-
 /* company page end */
 
-
+/* footer section start */
 .footer-section {
     background-color: #1F222A !important;
     padding: 80px 0;
@@ -621,7 +615,7 @@ section {
 }
 
 .footer-section p {
-    color: var(--footer-text);
+    color: var(--border-color);
 }
 
 .footer-section .list-unstyled li {
@@ -629,9 +623,581 @@ section {
 }
 
 .footer-section .list-unstyled li a.text-muted {
-    color: var(--footer-text) !important;
+    color: var(--border-color) !important;
 }
 
 .footer-section .social-icon {
-    color: var(--footer-text);
+    color: var(--border-color);
+}
+
+/* footer section end */
+
+
+/* ============================================= */
+/* ====== PART 2: DASHBOARD-SPECIFIC STYLES ==== */
+/* ======   Scoped with .dashboard-page   ====== */
+/* ============================================= */
+
+.dashboard-page .dashboard-banner {
+    
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem; /* Adds space between banner and content below */
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-page .dashboard-banner .banner-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-page .dashboard-banner .banner-text {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-page .dashboard-banner .banner-btn {
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px !important; /* Override global button style */
+    transition: all 0.2s ease;
+}
+
+.dashboard-page .dashboard-banner .banner-btn:hover {
+    background-color: var(--light-color);
+    transform: translateY(-2px);
+}
+
+.dashboard-page .dashboard-banner .banner-image {
+    max-width: 180px;
+    height: auto;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
+
+.dashboard-page .dashboard-container {
+    display: flex;
+}
+
+/* --- Sidebar --- */
+.dashboard-page .sidebar {
+    width: 260px;
+    background-color: #F8F8FD;
+    display: flex;
+    flex-direction: column;
+    /* --- Add these lines --- */
+    position: sticky; /* The magic property */
+    top: 0;           /* Stick to the top of the viewport */
+    height: 100vh;    /* Make it the full height of the screen */
+    overflow-y: auto; /* Add a scrollbar ONLY if the sidebar content is too long */
+}
+
+.dashboard-page .sidebar-header .logo-link {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+}
+
+.dashboard-page .sidebar-header .logo-icon {
+    width: 32px;
+    margin-right: 10px;
+}
+
+.dashboard-page .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-page .sidebar-nav .nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dashboard-page .sidebar-nav .nav-item a i {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.dashboard-page .sidebar-nav .nav-item a:hover {
+    background-color: var(--light-primary-color);
+    color: var(--primary-color);
+}
+
+.dashboard-page .sidebar-nav .nav-item.active a {
+    background-color: var(--light-primary-color);
+    color: var(--primary-color);
+}
+
+.dashboard-page .sidebar-nav .badge {
+    margin-left: auto;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    border-radius: 6px;
+}
+
+.dashboard-page .sidebar-footer {
+    margin-top: auto;
+}
+
+.dashboard-page .settings-title {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard-page .user-profile {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1rem;
+}
+
+.dashboard-page .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.dashboard-page .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-page .user-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--heading-color);
+}
+
+.dashboard-page .user-email {
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+/* --- Main Content --- */
+.dashboard-page .main-content {
+    flex: 1;
+    padding: 2.5rem;
+    overflow-y: auto;
+}
+
+.dashboard-page .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-page .main-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.dashboard-page .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.dashboard-page .header-actions .btn {
+    border-radius: 8px !important;
+    font-weight: 500;
+}
+
+.dashboard-page .notification-icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.dashboard-page .subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-page .greeting h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--heading-color);
+}
+
+.dashboard-page .greeting p {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.dashboard-page .date-range {
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.dashboard-page .date-range i {
+    margin-right: 0.75rem;
+    color: var(--text-color);
+}
+
+/* --- Cards --- */
+.dashboard-page .stat-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.dashboard-page .stat-card p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-page .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--heading-color);
+}
+
+.dashboard-page .card-icon {
+    font-size: 2rem;
+    color: #9ca3af;
+}
+
+.dashboard-page .chart-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+}
+
+.dashboard-page .chart-card .view-all-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dashboard-page .chart-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.dashboard-page .donut-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(var(--secondary-color) 0% 40%,
+            var(--primary-color) 40% 100%);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.dashboard-page .donut-chart::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: var(--white-color);
+    border-radius: 50%;
+}
+
+.dashboard-page .chart-center-text {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.dashboard-page .chart-center-text small {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.dashboard-page .chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard-page .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dashboard-page .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dashboard-page .legend-dot.unsuitable {
+    background-color: var(--primary-color);
+}
+
+.dashboard-page .legend-dot.interviewed {
+    background-color: var(--secondary-color);
+}
+
+.dashboard-page .legend-item p {
+    margin: 0;
+}
+
+.dashboard-page .legend-value {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--heading-color);
+}
+
+.dashboard-page .legend-label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* --- Interviews Card --- */
+.dashboard-page .interviews-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.dashboard-page .interviews-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.dashboard-page .interviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-page .nav-arrows {
+    display: flex;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+.dashboard-page .interview-date {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-page .timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.dashboard-page .timeline::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.dashboard-page .timeline-item {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.dashboard-page .timeline-time {
+    width: 80px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding-right: 1.5rem;
+    text-align: right;
+}
+
+.dashboard-page .timeline-content {
+    flex: 1;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.dashboard-page .timeline-content.active {
+    background-color: var(--light-primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dashboard-page .interview-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dashboard-page .interview-details p {
+    margin: 0;
+}
+
+.dashboard-page .interviewer-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--heading-color);
+}
+
+.dashboard-page .interviewer-title {
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+/* --- Application History --- */
+.dashboard-page .application-history-container {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.dashboard-page .application-history-container .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.dashboard-page .application-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-page .application-item:last-of-type {
+    border-bottom: none;
+}
+
+.dashboard-page .company-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.dashboard-page .application-details {
+    flex-grow: 1;
+}
+
+.dashboard-page .job-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+    color: var(--heading-color);
+}
+
+.dashboard-page .company-info {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.dashboard-page .date-applied {
+    text-align: left;
+    margin: 0 2rem;
+}
+
+.dashboard-page .date-label {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.dashboard-page .date-value {
+    font-weight: 500;
+    margin: 0;
+    color: var(--heading-color);
+}
+
+.dashboard-page .application-status {
+    min-width: 110px;
+    text-align: center;
+}
+
+.dashboard-page .status-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+}
+
+.dashboard-page .status-in-review {
+    background: #eb86332a;
+    color: #FFB836;
+}
+
+.dashboard-page .status-shortlisted {
+    background: #4640DE2a;
+    color: #4640DE;
+}
+
+.dashboard-page .status-declined {
+    background: #FF65502a;
+    color: #FF6550;
+}
+
+.dashboard-page .more-options {
+    color: #9ca3af;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.dashboard-page .view-all-history-link {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.dashboard-page .view-all-history-link .view-all-link,
+.dashboard-page .interviews-card .view-all-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
 }

@@ -19,7 +19,7 @@
             </div>
             <div>
                 <a href="{{ route('login')}}" wire:navigate class="text-decoration-none text-primary me-3 login">Login</a>
-                <a href="#" class="btn btn-primary px-4">Sign Up</a>
+                <a href="{{ route('register')}}" wire:navigate class="btn btn-primary px-4">Sign Up</a>
             </div>
         </nav>
     </div>

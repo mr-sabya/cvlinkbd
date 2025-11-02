@@ -13,12 +13,34 @@
 
 <body>
 
-    
 
-    <!-- content -->
-    @yield('content')
+    <header class="login-header">
+        <div class="container">
+            <div class="py-3">
+                <div class="logo">
+                    <a href="{{ route('home')}}" wire:navigate>
+                        <img src="assets/images/logo.png" alt="JobHunty Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="signup-wrapper">
+        <div class="signup-left">
 
-    
+            <div class="image-box">
+                <img src="assets/images/auth/hired.png" alt="User" class="hired absulate">
+                <img src="assets/images/auth/person.png" alt="User" class="absulate man">
+                <img src="assets/images/auth/testimonial.png" alt="User" class="testimonial absulate">
+            </div>
+
+        </div>
+
+        <!-- content -->
+        @yield('content')
+
+
+    </div>
 
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>

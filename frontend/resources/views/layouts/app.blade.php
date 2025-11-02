@@ -7,7 +7,11 @@
     <title>JobHuntly - Discover more than 5000+ Jobs</title>
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/login.css">
+
     @livewireStyles
 </head>
 

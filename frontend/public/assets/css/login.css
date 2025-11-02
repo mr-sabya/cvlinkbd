@@ -6,6 +6,7 @@ body {
 .login-header{
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .signup-wrapper {
@@ -14,6 +15,7 @@ body {
 }
 .signup-left{
     background: #f9f9fc;
+    position: relative;
 }
 
 .signup-left,
@@ -22,18 +24,33 @@ body {
 }
 
 .signup-left .image-box{
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
 }
 .signup-left .image-box .absulate{
     position: absolute;
 }
 
 .signup-left .image-box .man{
-    bottom: 0;
-    right: 100px;
-    height: 670px;
+    height: 100%;
+    width: auto;
+    margin-right: 10%;
+}
+
+.signup-left .image-box .hired{
+    top: 0;
+    left:  10%;
+    width: auto;
+}
+.signup-left .image-box .testimonial{
+    bottom: 5%;
+    right:  5%;
     width: auto;
 }
 
@@ -84,7 +101,7 @@ body {
     content: '';
     position: absolute;
     height: 1px;
-    width: 40%;
+    width: 30%;
     background: #ddd;
     top: 50%;
 }
